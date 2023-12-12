@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<!--
+	Aerial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>小游戏主页</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name='description' content='小游戏主页'>
+	<meta name='keywords' content='小游戏主页'>
+	<meta name='robots' content='index,follow'>
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+	<div id="wrapper">
+		<div id="bg"></div>
+		<div id="overlay"></div>
+		<div id="main">
+
+			<!-- Header -->
+			<header id="header">
+				<h1>小游戏</h1>
+				<hr class="hr">
+        		<div class="container">
+				<span id="hitokoto">正在获取中...</span>
+				<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+        		
+				<nav>
+					<ul>
+						<li class="navigation__item"><a href="https://yuanshang000.github.io/xiaoyouxi/2048-master/index.html" target="_blank" title="2048">2048</a></li>
+                		<li class="navigation__item"><a href="https://yuanshang000.github.io/xiaoyouxi/FruitNinja/index.html" target="_blank" title="水果忍者">水果忍者</a></li>
+               			 <li class="navigation__item"><a href="https://yuanshang000.github.io/xiaoyouxi/mouseHit/index.html" target="_blank" title="打地鼠">打地鼠</a></li>
+		</div>
+	</div>
+	<script>
+		window.onload = function () { document.body.classList.remove('is-preload'); }
+		window.ontouchmove = function () { return false; }
+		window.onorientationchange = function () { document.body.scrollTop = 0; }
+	</script>
+	<script disable-devtool-auto src='http://fastly.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'
+		disable-menu='false'></script>
+</body>
+
+</html>
