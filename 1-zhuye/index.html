@@ -10,8 +10,57 @@
     <link rel="icon" href="./favicon.ico">
     <link rel="shortcut icon" href="./favicon.ico">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <style>
+        body {
+            background-color: #000;
+            overflow: hidden;
+        }
+        
+        .snowflake {
+            position: absolute;
+            color: #fff;
+            font-size: 2em;
+            pointer-events: none;
+            animation: snowfall linear infinite;
+        }
+        
+        @keyframes snowfall {
+            0% {
+                transform: translateY(-100vh);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 <body>
+    <script>
+        // 创建雪花元素
+        function createSnowflake() {
+            const snowflake = document.createElement("span");
+            snowflake.innerHTML = "❄";
+            snowflake.classList.add("snowflake");
+            snowflake.style.left = Math.random() * 100 + "vw";
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
+            document.body.appendChild(snowflake);
+            
+            // 雪花飘落结束后移除元素
+            snowflake.addEventListener("animationend", function() {
+                snowflake.remove();
+            });
+        }
+        
+        // 控制雪花的数量和频率
+        function snowfall() {
+            setInterval(createSnowflake, 200);
+        }
+        
+        // 开始下雪
+        snowfall();
+    </script>
     <div class="content">
         <div class="title">源殇dfy</div>
         <hr class="hr">
